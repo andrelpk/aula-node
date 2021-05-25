@@ -10,3 +10,9 @@ function oi()
 {
     console.log("Ola pessoal!!!");
 }
+
+console.log("Antes da função");
+
+fs.writeFile("turma.txt", "ola " + nome, oi);
+
+console.log("Depois da função");
