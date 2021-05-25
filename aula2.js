@@ -16,11 +16,20 @@ var abc = "oi galera!";
 function soma(n1, n2)
 {
     var abc = "Dentro da Função";
-    console.log(abc)
+    console.log(abc);
+
     var total = n1 + n2;
+    function exibe(val)
+    {
+        console.log(abc);
+    }
+
+    exibe(total);
+    
     return total;
 }
 
 var res = soma(n1, n2);
 
 console.log(res);
+console.log(abc);

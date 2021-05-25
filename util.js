@@ -1,15 +1,20 @@
-function reverso()
+/*
+    cidade -> edadic
+*/    
+var reverso = function (valor)
 {
     
+    var tam = valor.length - 1;
+    var saida = "";
+
+    while (tam >= 0)
+    {
+        saida = saida + valor.charAt(tam);
+        tam = tam - 1;
+    }
+
+    return saida;
+
 }
 
-var nome = "André";
-var tam = nome.length - 1;
-var saida = ""
-
-while (tam >= 0);
-{
-saida = saida + nome.charAt(tam);
-
-tam = tam - 1;
-}
+module.exports = reverso;

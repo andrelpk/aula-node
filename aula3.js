@@ -1,29 +1,67 @@
 
+var lib = require("./util");
+
+console.log(lib);
+
+var teste = lib("Cidade");
+console.log(teste);
+
+// ES6 ou ES2015
+
 var nome = "André";
+nome = 123;
 
 let abc = "abc";
 const efg = "efg"; // NÃO PODE ALTERAR DEPOIS DE CRIADO
 
+let idade = 123;
+
+// funçaõ anonima
 let soma = function(n1, n2){
     return n1 + n2;
 }
 // forma simplificada  ( => = RETURN )
 let outra = (n1, n2) => n1 + n2;
 
-console.log( nome.length )
+//console.log( nome.length );
 
-function reverso()
-{
-    
+/*
+   Programação Orientada a Objetos
+
+   função -> metodos -> function
+   atributos -> propriedades -> variavel
+
+   encapsulamento -> pacote
+
+   molde -> classe
+
+   instaciado -> criado em memoria
+
+   */
+
+   // antes do ES6
+var Pessoa = function(){
+    this.nome = "André";
 }
 
-var nome = "André";
-var tam = nome.length - 1;
-var saida = ""
+// instancia do objeto
+var andre = new Pessoa();
+andre.nome = "Luizinho";
 
-while (tam >= 0)
+console.log(andre);
+
+// apartir do ES6
+class Caneta
 {
-saida = saida + nome.charAt(tam);
-
-tam = tam - 1;
+    escrever()
+    {
+        console.log("escreveu no caderno");
+    }
 }
+
+var bic = new Caneta();
+bic.cor = "azul";
+
+console.log(bic);
+
+bic.escrever();
